@@ -11,6 +11,7 @@ class Server:
         print(self.server.static_folder)
         print('Cargando servidor')
         self.port = 3000
+        self.server.secret_key = 'asdadkakgrkgrk'
         self.__loadRouter()
         self.__runServer()
 

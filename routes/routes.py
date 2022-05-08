@@ -2,6 +2,7 @@ from flask import Flask
 
 from controllers.readdir import readDir as readdir
 from controllers.sysdump import sysdump
+from controllers.auth import login, getSession
 
 class Router:
 
@@ -10,3 +11,5 @@ class Router:
 
         api.get('/sysdump')(sysdump)
         api.post('/readdir')(readdir)
+        api.post('/login')(login)
+        api.get('/session')(getSession)
